@@ -1,10 +1,9 @@
-var 회원들 = [1, "2", 3];
-var 오브젝트 = { a: 1 };
-//let 이름: any; //타입이라고 보다는 쉴드 해제의 뜻이라 typescript라고 하긴 좀 그럼
-var 이름; //any 보다 조금 더 안전함
-이름 = 123;
-이름 = true;
-// let 나이: string | number;
-// 나이 + 1;  //union 타입이 이아니라 string이나 number둘중에 하나였으면 에러안떴음
-var 나이 = 1;
-나이 - 1;
+var 자료 = {
+ name: "kim",
+} as const
+
+
+
+자료.name= 'park'
+
+

@@ -63,3 +63,78 @@ let 이름: unknown; //any 보다 조금 더 안전함
 let 나이: unknown = 1;
 나이 - 1;
 ```
+
+```
+function hi(x?: string) {
+  if (x) {
+    console.log("ㅎㅇ" + x);
+  } else {
+    console.log("ㄴㄱ?");
+  }
+}
+
+hi("웡키");
+
+function 세알려함수(x: number | string): number {
+  return x.toString().length;
+}
+
+function 결혼가능한가(
+  money: number,
+  house: boolean,
+  charm: string
+): string | void {
+  let score: number = 0;
+  score += money;
+  if (house) {
+    score += 500;
+  }
+  if (charm === "상") {
+    score += 100;
+  }
+  if (score >= 600) {
+    return "결혼쌉가능";
+  }
+}
+```
+
+```type Girlfriend = {
+  name?: string;
+};
+
+const 여친: Girlfriend = {
+  name: "애슐리",
+};
+
+여친.name = "유라";
+```
+
+/_ type alias 타입변수 _/
+
+```
+type Name = string;
+type Age = number;
+type Person = Name | Age;
+
+type PositionX = { x: number };
+type PositionY = { y: number };
+
+type NewType = PositionX & PositionY;
+/* object를 extend하고싶을때 이렇게 사용하면됨 */
+let position: NewType = { x: 10, y: 20 };
+```
+
+```
+type PositionX = { x: number };
+type PositionY = { x: number };
+
+type Newtype = PositionX & PositionY;
+
+type 이타입 = {
+  color: string;
+  size: number;
+  readonly position: number[];
+};
+
+type User = { name: string; email?: string; phone: number; adult: boolean };
+```
