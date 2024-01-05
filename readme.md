@@ -138,3 +138,21 @@ type 이타입 = {
 
 type User = { name: string; email?: string; phone: number; adult: boolean };
 ```
+
+```
+/* type 함수타입 = (a: string) => number;
+
+let 함수: 함수타입 = function (a) {
+  return 10;
+}; */
+
+/* type 함수타입 = (a: number) => number;
+
+let 회원정보 = {
+  name: "kim",
+  plusOne :(a:number)=> number,
+  changeName : () => void,
+};
+
+회원정보.plusOne(); */
+```
